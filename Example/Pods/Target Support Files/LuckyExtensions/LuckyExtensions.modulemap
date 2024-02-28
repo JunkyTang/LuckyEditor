@@ -1,0 +1,6 @@
+framework module LuckyExtensions {
+  umbrella header "LuckyExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}

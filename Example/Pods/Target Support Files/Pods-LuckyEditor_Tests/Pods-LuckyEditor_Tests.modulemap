@@ -1,0 +1,6 @@
+framework module Pods_LuckyEditor_Tests {
+  umbrella header "Pods-LuckyEditor_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

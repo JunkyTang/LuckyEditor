@@ -1,0 +1,6 @@
+framework module LuckyEditor {
+  umbrella header "LuckyEditor-umbrella.h"
+
+  export *
+  module * { export * }
+}

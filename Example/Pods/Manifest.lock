@@ -1,0 +1,38 @@
+PODS:
+  - LuckyEditor (0.1.0):
+    - LuckyExtensions (~> 0.1)
+    - LuckyUI (~> 0.1)
+    - SDWebImage (~> 5.19)
+  - LuckyExtensions (0.1.0)
+  - LuckyUI (0.1.1):
+    - LuckyExtensions (= 0.1.0)
+    - SnapKit (~> 5.7)
+  - SDWebImage (5.19.0):
+    - SDWebImage/Core (= 5.19.0)
+  - SDWebImage/Core (5.19.0)
+  - SnapKit (5.7.1)
+
+DEPENDENCIES:
+  - LuckyEditor (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - LuckyExtensions
+    - LuckyUI
+    - SDWebImage
+    - SnapKit
+
+EXTERNAL SOURCES:
+  LuckyEditor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LuckyEditor: 1e26e2010fa2d3410315c1de0635ac5aa336d297
+  LuckyExtensions: 62117a421d957f1147faaae8f80395e0472889ac
+  LuckyUI: 65f871c5af0daabdf26a0c90dfb352cad6edb0eb
+  SDWebImage: 981fd7e860af070920f249fd092420006014c3eb
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+
+PODFILE CHECKSUM: 32372f37b48f1ff35cbddb5828f661360459e7f9
+
+COCOAPODS: 1.15.2
