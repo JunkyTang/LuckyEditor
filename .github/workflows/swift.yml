@@ -1,0 +1,37 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Publish to CocoaPods
+
+on:
+  push:
+    tags:
+      - '*' # 当以 'v' 开头的标签被推送到主分支时触发
+
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Setup CocoaPods
+        run: |
+          sudo gem install cocoapods
+
+      - name: Install dependencies
+        run: |
+          cd Example
+          pod install --repo-update
+
+      - name: Navigate to directory
+        run: cd ..
+
+      - name: Push To Trunk
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: 
+          pod trunk push --allow-warnings
